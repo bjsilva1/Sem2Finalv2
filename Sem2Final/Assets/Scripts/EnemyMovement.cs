@@ -40,7 +40,7 @@ public class EnemyMovement : MonoBehaviour
 
         if (positions.Count > delay / Time.deltaTime)
         {
-            if(Time.timeScale == 1)
+            if(positions[0].timeScale == 1)
             {
                 transform.position = positions[0].position;
                 grapple.gameObject.SetActive(positions[0].isGrappled);

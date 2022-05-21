@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
     private float maxMomentum;
     private float horizMomentum;
-    Vector2 mouseDir;
+    Vector2 mousePos;
     private Transform lastSpawnpoint;
     public Transform firstSpawn;
     //public GameObject particleEmitterObject;
@@ -110,8 +110,7 @@ public class PlayerController : MonoBehaviour
         if(!grappleHooked && Input.GetKeyDown(KeyCode.Mouse0))
         {
             grapple.gameObject.SetActive(true);
-            Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-            mouseDir = new Vector2(mousePos.x - transform.position.x, mousePos.y - transform.position.y).normalized;
+            mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         }
 
         if(grapple.gameObject.activeSelf && !grappleHooked)
@@ -318,6 +317,7 @@ public class PlayerController : MonoBehaviour
 
     public void ShootGrapple()
     {
+        Vector2 mouseDir = new Vector2(mousePos.x - transform.position.x, mousePos.y - transform.position.y).normalized;
         grapple.SetPosition(1, (Vector2) transform.position + mouseDir * length);
 
         RaycastHit2D ray = Physics2D.Linecast(transform.position, (Vector2)transform.position + mouseDir * length, grappleLayer);
