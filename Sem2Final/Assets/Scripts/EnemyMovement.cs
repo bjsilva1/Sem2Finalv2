@@ -7,12 +7,14 @@ public class EnemyState
     public Vector3 position;
     public bool isGrappled;
     public Vector3 grapplePos;
+    public float timeScale;
 
-    public EnemyState(Vector3 pos, bool grappled, Vector3 gPos)
+    public EnemyState(Vector3 pos, bool grappled, Vector3 gPos, float time)
     {
         position = pos;
         isGrappled = grappled;
         grapplePos = gPos;
+        timeScale = time;
     }
 }
 
@@ -33,15 +35,26 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        positions.Add(new EnemyState(player.position, playerScript.grappled, playerScript.lastGrapplePos));
+        positions.Add(new EnemyState(player.position, playerScript.grappled, playerScript.lastGrapplePos, Time.timeScale));
         grapple.SetPosition(0, transform.position);
 
         if (positions.Count > delay / Time.deltaTime)
         {
-            transform.position = positions[0].position;
-            grapple.gameObject.SetActive(positions[0].isGrappled);
-            grapple.SetPosition(1, positions[0].grapplePos);
-            positions.RemoveAt(0);
+            if(Time.timeScale == 1)
+            {
+                transform.position = positions[0].position;
+                grapple.gameObject.SetActive(positions[0].isGrappled);
+                grapple.SetPosition(1, positions[0].grapplePos);
+                positions.RemoveAt(0);
+                return;
+            }
+            for (float i = 0; i < 1; i+= positions[0].timeScale)
+            {
+                transform.position = positions[0].position;
+                grapple.gameObject.SetActive(positions[0].isGrappled);
+                grapple.SetPosition(1, positions[0].grapplePos);
+                positions.RemoveAt(0);
+            }
         }
     }
 }

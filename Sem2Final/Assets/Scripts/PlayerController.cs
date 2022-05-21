@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     public bool isHoldingMouse;
 
     private Camera cam;
+    public GameObject vcam;
 
 
     [Header("Level")]
@@ -46,7 +47,8 @@ public class PlayerController : MonoBehaviour
     public Transform grappleEnd;
     private bool grappleHooked;
     private float length;
-    public LayerMask GroundLayer;
+    public LayerMask grappleLayer;
+    public LayerMask groundLayer;
 
     float angle = 0;
     float angularVelocity;
@@ -55,6 +57,7 @@ public class PlayerController : MonoBehaviour
     private float horizMomentum;
     Vector2 mouseDir;
     private Transform lastSpawnpoint;
+    public Transform firstSpawn;
     //public GameObject particleEmitterObject;
 
 
@@ -68,15 +71,25 @@ public class PlayerController : MonoBehaviour
         length = 0;
         isDead = false;
         StartCoroutine(ResetEnemy());
+        lastSpawnpoint = firstSpawn;
     }
 
     void Update()
     {
+        if (CutsceneManager.instance.isPlaying)
+        {
+            return;
+        }
+            
         if(isDead)
         {
+            playerRb.velocity = Vector2.zero;
             if(deathScreen.animState == 2)
             {
+                vcam.SetActive(false);
                 transform.position = lastSpawnpoint.position;
+                cam.transform.position = transform.position;
+                vcam.SetActive(true);
                 UpdateDeathScreenPos();
                 StartCoroutine(ResetEnemy());
                 isDead = false;
@@ -104,7 +117,7 @@ public class PlayerController : MonoBehaviour
         if(grapple.gameObject.activeSelf && !grappleHooked)
         {
             ShootGrapple();
-            length += Time.deltaTime * 80;
+            length += Time.deltaTime * 200;
             if (length > 20)
             {
                 grapple.gameObject.SetActive(false);
@@ -140,7 +153,7 @@ public class PlayerController : MonoBehaviour
         {
             Death();
         }
-    }
+    } 
 
     public IEnumerator CameraTransfer(float time, Tilemap tilemap, TileBase doorTile, Vector3 topPos, Vector3 botPos)
     {
@@ -307,8 +320,18 @@ public class PlayerController : MonoBehaviour
     {
         grapple.SetPosition(1, (Vector2) transform.position + mouseDir * length);
 
-        RaycastHit2D ray = Physics2D.Linecast(transform.position, (Vector2)transform.position + mouseDir * length, GroundLayer);
+        RaycastHit2D ray = Physics2D.Linecast(transform.position, (Vector2)transform.position + mouseDir * length, grappleLayer);
+        RaycastHit2D groundRay = Physics2D.Linecast(transform.position, (Vector2)transform.position + mouseDir * length, groundLayer);
         Debug.DrawLine(transform.position, (Vector2) transform.position + mouseDir * length);
+
+        if (groundRay.collider != null)
+        {
+            grapple.gameObject.SetActive(false);
+            length = 0;
+            grappleHooked = false;
+            angularVelocity = 0;
+            return;
+        }
         if(ray.collider != null)
         {
             grappleEnd.position = ray.point;
@@ -363,7 +386,6 @@ public class PlayerController : MonoBehaviour
         grappleHooked = false;
         isJumping = false;
         grapple.gameObject.SetActive(false);
-        enemy.SetActive(false);
         UpdateDeathScreenPos();
         deathScreen.animator.Play("In");
     }
@@ -372,7 +394,8 @@ public class PlayerController : MonoBehaviour
     {
         enemy.SetActive(false);
         yield return new WaitForSeconds(1.0f);
-        yield return new WaitUntil(< !Mathf.Approximately(playerRb.velocity.x, 0 > ()));
+        yield return new WaitUntil(() => Vector2.Distance(transform.position,  lastSpawnpoint.position) > 2);
+        yield return new WaitForSeconds(1.0f);
         enemy.SetActive(true);
     }
 

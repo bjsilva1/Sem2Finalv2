@@ -61,6 +61,8 @@
     <Compile Include="Assets\Animations\Death\AnimStates.cs" />
     <Compile Include="Assets\Scripts\CutoutMask.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\CutsceneManager.cs" />
+    <Compile Include="Assets\Scripts\Cutscenes\FirstGrapple.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
