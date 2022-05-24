@@ -5,17 +5,23 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
+    public GameObject finalText;
+    public TMP_Text highScore;
+    public GameObject newRecordText;
     public TMP_Text text;
     public float time;
     public Animator timerAnim;
 
     private bool done;
+
+    public SceneChange sceneChanger;
     // Start is called before the first frame update
     void Start()
     {
         done = false;
         time = 0;
         UpdateText();
+        finalText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -35,8 +41,23 @@ public class Timer : MonoBehaviour
     public void StopTime()
     {
         done = true;
+        text.text = time.ToString("0.000");
         timerAnim.Play("FinalTime");
         if (!PlayerPrefs.HasKey("HighScore1") || time < PlayerPrefs.GetFloat("HighScore1"))
+        {
             PlayerPrefs.SetFloat("HighScore1", time);
+            newRecordText.SetActive(true);
+        }
+        else
+            newRecordText.SetActive(false);
+
+        Invoke("EnableEndScreen", 1f);
+    }
+
+    void EnableEndScreen()
+    {
+        highScore.text = "Best Time: " + PlayerPrefs.GetFloat("HighScore1").ToString("0.000");
+        finalText.SetActive(true);
+        Time.timeScale = 0;
     }
 }
