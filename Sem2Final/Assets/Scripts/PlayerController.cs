@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour
     Vector2 mousePos;
     private Transform lastSpawnpoint;
     public Transform firstSpawn;
+
+    private float coyoteTimer;
     //public GameObject particleEmitterObject;
 
 
@@ -72,6 +74,7 @@ public class PlayerController : MonoBehaviour
         isDead = false;
         StartCoroutine(ResetEnemy());
         lastSpawnpoint = firstSpawn;
+        coyoteTimer = -10f;
     }
 
     void Update()
@@ -138,6 +141,12 @@ public class PlayerController : MonoBehaviour
             angularVelocity = 0;
             Debug.Log(horizMomentum);
         }
+
+        if (onGround)
+            coyoteTimer = 0.05f;
+
+        if (coyoteTimer > 0)
+            coyoteTimer -= Time.deltaTime;
     }
 
 
@@ -245,11 +254,12 @@ public class PlayerController : MonoBehaviour
             //animController.PlayAnim("Run", 2);
         }
 
-        if (Input.GetKey(KeyCode.Space) && onGround && !isJumping)
+        if (Input.GetKey(KeyCode.Space) && (onGround || coyoteTimer > 0) && !isJumping)
         {
             onGround = false;
             isJumping = true;
             playerRb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            coyoteTimer = -10f;
         }
 
         if(grappleHooked)
@@ -272,7 +282,7 @@ public class PlayerController : MonoBehaviour
         string ceilingCheck = collisionCheckScript.CeilingCollision();
         string groundCheck = collisionCheckScript.GroundCollision();
 
-        onGround = !groundCheck.Equals("");
+        onGround = !groundCheck.Equals(""); 
         if (!groundCheck.Equals(""))
         {
             ResetToground();
@@ -303,6 +313,7 @@ public class PlayerController : MonoBehaviour
     private float bounceNum;
     public void ResetToground()
     {
+        coyoteTimer = -1f;
         onGround = true;
         isJumping = false;
         playerRb.gravityScale = gravity;
