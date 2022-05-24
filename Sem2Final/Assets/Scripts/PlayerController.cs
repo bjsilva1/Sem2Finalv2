@@ -188,6 +188,8 @@ public class PlayerController : MonoBehaviour
 
     public void MovePlayerStandard()
     {
+        if (CutsceneManager.instance.isPlaying)
+            return;
         if (onGround)
             currCollision = CheckCollisions();
 

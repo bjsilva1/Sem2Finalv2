@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class End : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Timer timeTracker;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        timeTracker.StopTime();
+        CutsceneManager.instance.isPlaying = true;
     }
 }
