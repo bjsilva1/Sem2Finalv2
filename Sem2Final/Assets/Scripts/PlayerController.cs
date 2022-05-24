@@ -336,6 +336,7 @@ public class PlayerController : MonoBehaviour
         }
         if(ray.collider != null)
         {
+            length = ray.distance;
             grappleEnd.position = ray.point;
             grapple.SetPosition(1, grappleEnd.position);
             angle = Mathf.Atan2(transform.position.y - grappleEnd.position.y, transform.position.x - grappleEnd.position.x);
