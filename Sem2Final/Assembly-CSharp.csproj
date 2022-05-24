@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Animations\Death\AnimStates.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\FirstGrapple.cs" />
+    <Compile Include="Assets\Scripts\UI\ChangeScreen.cs" />
     <Compile Include="Assets\Scripts\UI\EscapeMenu.cs" />
     <Compile Include="Assets\Scripts\CutoutMask.cs" />
     <Compile Include="Assets\Scripts\UI\Timer.cs" />
@@ -69,7 +70,6 @@
     <Compile Include="Assets\Scripts\SceneChange.cs" />
     <Compile Include="Assets\Scripts\Cutscenes\EnableOnContact.cs" />
     <Compile Include="Assets\Scripts\UI\LevelSelect.cs" />
-    <Compile Include="Assets\Scripts\UI\ChangeScreen.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

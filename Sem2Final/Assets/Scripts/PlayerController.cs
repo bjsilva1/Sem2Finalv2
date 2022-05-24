@@ -236,15 +236,15 @@ public class PlayerController : MonoBehaviour
         //Jumpingd
         if (Input.GetKey(KeyCode.Space) && playerRb.velocity.y > 0)
         {
-            gravity = gravityScaler / 2;
+            playerRb.gravityScale = gravityScaler / 2;
         }
         else if(playerRb.velocity.y > 0)
         {
-            gravity = gravityScaler * 1.25f;
+            playerRb.gravityScale = gravityScaler * 1.25f;
         }
         else
         {
-            gravity = gravityScaler * .75f;
+            playerRb.gravityScale = gravityScaler * .75f;
         }
 
 
