@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour
     public TMP_Text text;
     public float time;
     public Animator timerAnim;
+    public string playerPrefName;
 
     private bool done;
 
@@ -43,9 +44,9 @@ public class Timer : MonoBehaviour
         done = true;
         text.text = time.ToString("0.000");
         timerAnim.Play("FinalTime");
-        if (!PlayerPrefs.HasKey("HighScore1") || time < PlayerPrefs.GetFloat("HighScore1"))
+        if (!PlayerPrefs.HasKey(playerPrefName) || time < PlayerPrefs.GetFloat(playerPrefName))
         {
-            PlayerPrefs.SetFloat("HighScore1", time);
+            PlayerPrefs.SetFloat(playerPrefName, time);
             newRecordText.SetActive(true);
         }
         else
@@ -56,7 +57,7 @@ public class Timer : MonoBehaviour
 
     void EnableEndScreen()
     {
-        highScore.text = "Best Time: " + PlayerPrefs.GetFloat("HighScore1").ToString("0.000");
+        highScore.text = "Best Time: " + PlayerPrefs.GetFloat(playerPrefName).ToString("0.000");
         finalText.SetActive(true);
         Time.timeScale = 0;
     }

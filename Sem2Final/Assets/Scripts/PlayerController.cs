@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public int moveDirection;
     public bool isDead;
     public bool isHoldingMouse;
+    public Animator anim;
 
     private Camera cam;
     public GameObject vcam;
@@ -60,11 +61,15 @@ public class PlayerController : MonoBehaviour
     public Transform firstSpawn;
 
     private float coyoteTimer;
+    private float size = 2;
+    private Transform sprite;
+    public Transform playerSprite { get { return sprite; } }
     //public GameObject particleEmitterObject;
 
 
     void Start()
     {
+        sprite = transform.GetChild(0);
         moveDirection = 1;
         //jumpParticle = particleEmitterObject.GetComponent<ParticleSystem>();
         playerRb = GetComponent<Rigidbody2D>();
@@ -224,6 +229,7 @@ public class PlayerController : MonoBehaviour
 
         if(Mathf.Abs(horizMomentum) < speed)
         {
+            sprite.eulerAngles = Vector3.zero;
             horizMomentum = 0;
             playerRb.velocity = new Vector2(Mathf.Clamp(horizontal * speed, -speed, speed), Mathf.Clamp(playerRb.velocity.y, -30, Mathf.Infinity));
         }
@@ -231,6 +237,7 @@ public class PlayerController : MonoBehaviour
         {
             horizMomentum = Mathf.Clamp(horizMomentum + horizontal * Time.deltaTime * 10f, -maxMomentum, maxMomentum);
             playerRb.velocity = new Vector2(horizMomentum, Mathf.Clamp(playerRb.velocity.y, -30, Mathf.Infinity));
+            sprite.Rotate(0, 0, Time.deltaTime * 50 * horizMomentum);
         }
 
         //Jumpingd
@@ -248,10 +255,15 @@ public class PlayerController : MonoBehaviour
         }
 
 
+        transform.localScale = new Vector3(size * -Mathf.Sign(playerRb.velocity.x), transform.localScale.y, 0);
         //Movement
-        if (!Mathf.Approximately(playerRb.velocity.x, 0.0f))
+        if (!Mathf.Approximately(playerRb.velocity.x, 0.0f) && onGround)
         {
-            //animController.PlayAnim("Run", 2);
+            anim.Play("Run");
+        }
+        else
+        {
+            anim.Play("Idle");
         }
 
         if (Input.GetKey(KeyCode.Space) && (onGround || coyoteTimer > 0) && !isJumping)
@@ -313,6 +325,7 @@ public class PlayerController : MonoBehaviour
     private float bounceNum;
     public void ResetToground()
     {
+        sprite.eulerAngles = Vector3.zero;
         coyoteTimer = -1f;
         onGround = true;
         isJumping = false;
@@ -369,6 +382,7 @@ public class PlayerController : MonoBehaviour
         }
         angle += angularVelocity * Time.deltaTime;
         transform.position = grappleEnd.position + length * new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0);
+        sprite.rotation = Quaternion.Euler(0, 0, angle * Mathf.Rad2Deg + 90);
 
         if (CheckRopeCollisions(angularVelocity * new Vector2(-Mathf.Sin(angle), Mathf.Cos(angle)))) angularVelocity = 0;
 

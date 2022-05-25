@@ -7,7 +7,7 @@ public class CutsceneManager : MonoBehaviour
     public bool isPlaying;
     public static CutsceneManager instance;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         instance = this;
         isPlaying = false;

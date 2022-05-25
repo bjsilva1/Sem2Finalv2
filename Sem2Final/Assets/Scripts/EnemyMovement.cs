@@ -5,13 +5,17 @@ using UnityEngine;
 public class EnemyState
 {
     public Vector3 position;
+    public float zRot;
+    public float horizSpeed;
     public bool isGrappled;
     public Vector3 grapplePos;
     public float timeScale;
 
-    public EnemyState(Vector3 pos, bool grappled, Vector3 gPos, float time)
+    public EnemyState(Vector3 pos, float zRot, float xSpeed, bool grappled, Vector3 gPos, float time)
     {
         position = pos;
+        this.zRot = zRot;
+        horizSpeed = xSpeed;
         isGrappled = grappled;
         grapplePos = gPos;
         timeScale = time;
@@ -26,35 +30,46 @@ public class EnemyMovement : MonoBehaviour
 
     public float delay;
     private PlayerController playerScript;
+    private Rigidbody2D playerRb;
     // Start is called before the first frame update
     void Start()
     {
         playerScript = player.GetComponent<PlayerController>();
+        playerRb = player.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        positions.Add(new EnemyState(player.position, playerScript.grappled, playerScript.lastGrapplePos, Time.timeScale));
+        float horizSpeed;
+        if (!playerScript.onGround)
+            horizSpeed = 0;
+        else
+            horizSpeed = playerRb.velocity.x;
+
+        positions.Add(new EnemyState(player.position, playerScript.playerSprite.rotation.z, horizSpeed, playerScript.grappled, playerScript.lastGrapplePos, Time.timeScale));
         grapple.SetPosition(0, transform.position);
 
         if (positions.Count > delay / Time.deltaTime)
         {
             if(positions[0].timeScale == 1)
             {
-                transform.position = positions[0].position;
-                grapple.gameObject.SetActive(positions[0].isGrappled);
-                grapple.SetPosition(1, positions[0].grapplePos);
-                positions.RemoveAt(0);
+                SetVars();
                 return;
             }
             for (float i = 0; i < 1; i+= positions[0].timeScale)
             {
-                transform.position = positions[0].position;
-                grapple.gameObject.SetActive(positions[0].isGrappled);
-                grapple.SetPosition(1, positions[0].grapplePos);
-                positions.RemoveAt(0);
+                SetVars();
             }
         }
+    }
+
+    void SetVars()
+    {
+        transform.position = positions[0].position;
+        transform.rotation = Quaternion.Euler(0, 0, positions[0].zRot);
+        grapple.gameObject.SetActive(positions[0].isGrappled);
+        grapple.SetPosition(1, positions[0].grapplePos);
+        positions.RemoveAt(0);
     }
 }
