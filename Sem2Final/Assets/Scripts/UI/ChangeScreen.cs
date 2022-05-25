@@ -30,6 +30,11 @@ public class ChangeScreen : MonoBehaviour
         }
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
     IEnumerator Tween(Transform lerpObject, Vector3 start, Vector3 end)
     {
         float t = 0;
