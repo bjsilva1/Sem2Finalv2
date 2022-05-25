@@ -47,6 +47,7 @@ MonoBehaviour:
   player: {fileID: 0}
   grapple: {fileID: 0}
   delay: 1
+  anim: {fileID: 2369289435936146574}
 --- !u!1 &2369289435936146571
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,9 +120,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -6998266811945389430, guid: 3d3abc569f5ffe446ab9be1f8ae43382, type: 3}
-  m_Color: {r: 1, g: 0.3726415, b: 0.3726415, a: 1}
+  m_Color: {r: 1, g: 0.9292453, b: 0.9292453, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

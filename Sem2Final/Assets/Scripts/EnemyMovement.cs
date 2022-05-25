@@ -31,6 +31,7 @@ public class EnemyMovement : MonoBehaviour
     public float delay;
     private PlayerController playerScript;
     private Rigidbody2D playerRb;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +67,21 @@ public class EnemyMovement : MonoBehaviour
 
     void SetVars()
     {
+        if(positions[0].horizSpeed > 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 0);
+            anim.Play("Run");
+
+        }
+        else if (positions[0].horizSpeed < 0)
+        {
+            transform.localScale = new Vector3(1, 1, 0);
+            anim.Play("Run");
+        }
+        else
+        {
+            anim.Play("Idle");
+        }
         transform.position = positions[0].position;
         transform.rotation = Quaternion.Euler(0, 0, positions[0].zRot);
         grapple.gameObject.SetActive(positions[0].isGrappled);
