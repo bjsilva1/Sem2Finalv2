@@ -10,4 +10,10 @@ public class SceneChange : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(newScene);
     }
+
+    public void Reset()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

@@ -360,6 +360,7 @@ public class PlayerController : MonoBehaviour
         }
         if(ray.collider != null)
         {
+            bounceNum = 0;
             length = ray.distance;
             grappleEnd.position = ray.point;
             grapple.SetPosition(1, grappleEnd.position);

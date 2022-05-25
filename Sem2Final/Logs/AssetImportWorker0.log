@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.8f1 (507919d4fff5) revision 5273881'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Education; OS build 19043.928; Version 2009; 64bit' Language: 'en' Physical Memory: 16138 MB
+OS: 'Windows 10 Education; OS build 19043.928; Version 2009; 64bit' Language: 'en' Physical Memory: 32603 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ C:/Users/700586/Documents/GitHub/Sem2Finalv2/Sem2Final
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52997
+52303
 Successfully changed project path to: C:/Users/700586/Documents/GitHub/Sem2Finalv2/Sem2Final
 C:/Users/700586/Documents/GitHub/Sem2Finalv2/Sem2Final
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 191.05 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 35.55 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.8f1 (507919d4fff5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Editor/Data/Resources/UnitySubsystems
@@ -27,453 +27,385 @@ Initialize engine version: 2020.3.8f1 (507919d4fff5)
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA Quadro P520 (ID=0x1d34)
+    Renderer: NVIDIA GeForce RTX 2070 Super with Max-Q Design (ID=0x1ed1)
     Vendor:   
-    VRAM:     1983 MB
-    Driver:   30.0.14.7141
+    VRAM:     8011 MB
+    Driver:   26.21.14.4262
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56732
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56772
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.008510 seconds.
+Registered in 0.002366 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 154.64 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 37.81 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.398 seconds
+- Completed reload, in  1.026 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.007128 seconds.
+Registered in 0.001759 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 134.83 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 30.96 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.929 seconds
+- Completed reload, in  0.841 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.41 seconds
-Refreshing native plugins compatible for Editor in 0.77 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1984 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 92.5 MB.
+System memory in use before: 92.6 MB.
 System memory in use after: 92.5 MB.
 
 Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 2428.
-Total: 5.398600 ms (FindLiveObjects: 0.568100 ms CreateObjectMapping: 0.269200 ms MarkObjects: 4.284600 ms  DeleteObjects: 0.273900 ms)
+Total: 1.875100 ms (FindLiveObjects: 0.167900 ms CreateObjectMapping: 0.076000 ms MarkObjects: 1.493200 ms  DeleteObjects: 0.137200 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Title.unity
-  artifactKey: Guid(e66df69fd36561f498e1a9f0766b8b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Title.unity using Guid(e66df69fd36561f498e1a9f0766b8b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2890fcce43f1ae6361f35ace5b5526f1') in 0.032243 seconds
-  Import took 0.041085 seconds .
+  path: Assets/Sprites/Back.png
+  artifactKey: Guid(2df0bed207c7b714baca674307960978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Back.png using Guid(2df0bed207c7b714baca674307960978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '353188d776f92f5562e3e9aa645ae5ea') in 0.096076 seconds
+  Import took 0.099547 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.007865 seconds.
-  path: Assets/Scenes/Title.unity
-  artifactKey: Guid(e66df69fd36561f498e1a9f0766b8b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Title.unity using Guid(e66df69fd36561f498e1a9f0766b8b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2890fcce43f1ae6361f35ace5b5526f1') in 0.006709 seconds
-  Import took 0.013018 seconds .
+  Time since last request: 0.000230 seconds.
+  path: Assets/Sprites/Resume.png
+  artifactKey: Guid(de840b78ef594d041879312347c7100a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Resume.png using Guid(de840b78ef594d041879312347c7100a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4363c1d77aa7b95f78297b4dc2d46d8b') in 0.009254 seconds
+  Import took 0.011830 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.730779 seconds.
-  path: Assets/Sprites/altJade-Sheet.png
-  artifactKey: Guid(8d7ec4db1bf638646a6440b54f5a15e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/altJade-Sheet.png using Guid(8d7ec4db1bf638646a6440b54f5a15e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b56b13808db98354f929f86e3a1a98b') in 0.409745 seconds
-  Import took 0.421845 seconds .
+  Time since last request: 0.000211 seconds.
+  path: Assets/Sprites/Quit.png
+  artifactKey: Guid(aa88321165ae49242a048216d5d219f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Quit.png using Guid(aa88321165ae49242a048216d5d219f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddd59ef4a07fb2d6f6073beb33352707') in 0.007610 seconds
+  Import took 0.010200 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000674 seconds.
-  path: Assets/Sprites/backgroundlolo_16.asset
-  artifactKey: Guid(c23a57c2bdac96a43853764dda33cc1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_16.asset using Guid(c23a57c2bdac96a43853764dda33cc1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e7c61fca1929a5009faa92dcccbfaa7') in 0.062252 seconds
-  Import took 0.072212 seconds .
+  Time since last request: 0.000171 seconds.
+  path: Assets/Sprites/JumpSprite.png
+  artifactKey: Guid(ef9de1e1b6d01f240a01b3cf431307ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/JumpSprite.png using Guid(ef9de1e1b6d01f240a01b3cf431307ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaef25c61426210ada1c879e207fe500') in 0.008131 seconds
+  Import took 0.010939 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000652 seconds.
-  path: Assets/Sprites/backgroundlolo_3.asset
-  artifactKey: Guid(26037c822aac5f84b9c776e7d6adf78e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_3.asset using Guid(26037c822aac5f84b9c776e7d6adf78e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5968fc60aea6d80109be3df3af3ad27b') in 0.026872 seconds
-  Import took 0.037978 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000671 seconds.
-  path: Assets/Sprites/backgroundlolo_15.asset
-  artifactKey: Guid(4df9ac02b48d6744e9a8c671518b7e6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_15.asset using Guid(4df9ac02b48d6744e9a8c671518b7e6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4f6582672e837aa5418dce176b852fe') in 0.040559 seconds
-  Import took 0.050482 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000576 seconds.
-  path: Assets/Sprites/Square.png
-  artifactKey: Guid(bb98bb9fa18007944bed0a940b11d426) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Square.png using Guid(bb98bb9fa18007944bed0a940b11d426) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb20e014badf889c93d86f1148dffd03') in 0.039013 seconds
-  Import took 0.049035 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000652 seconds.
-  path: Assets/Sprites/backgroundlolo_8.asset
-  artifactKey: Guid(aa3b445f9ac3bb74db50a25b559d0db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_8.asset using Guid(aa3b445f9ac3bb74db50a25b559d0db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '404a5e5e35e66cd7ead8be6da8210c9f') in 0.039378 seconds
-  Import took 0.048556 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000689 seconds.
-  path: Assets/Sprites/backgroundlolo.png
-  artifactKey: Guid(960bcf6a6285e5f45867b7dfa034513f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo.png using Guid(960bcf6a6285e5f45867b7dfa034513f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '413fb26d7417b096bc6c808bc68e25f5') in 0.118048 seconds
-  Import took 0.128115 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000646 seconds.
-  path: Assets/Sprites/backgroundlolo_14.asset
-  artifactKey: Guid(7b322ece137b7bb43bcc62a330a9e9da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_14.asset using Guid(7b322ece137b7bb43bcc62a330a9e9da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b685cc90acc7e78c00c1957216ecff4e') in 0.029021 seconds
-  Import took 0.037094 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000633 seconds.
-  path: Assets/Sprites/jade-Sheet.png
-  artifactKey: Guid(3d3abc569f5ffe446ab9be1f8ae43382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/jade-Sheet.png using Guid(3d3abc569f5ffe446ab9be1f8ae43382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c0ecb42cb4e8ff1f92105e128578363') in 0.076027 seconds
-  Import took 0.087609 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001154 seconds.
-  path: Assets/Sprites/backgroundlolo_4.asset
-  artifactKey: Guid(cd6d9be39f004184f9974830809fe783) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_4.asset using Guid(cd6d9be39f004184f9974830809fe783) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23f2266f9d127c6adcca4e457f400ae8') in 0.029089 seconds
-  Import took 0.039684 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000646 seconds.
-  path: Assets/Sprites/backgroundlolo_5.asset
-  artifactKey: Guid(52f77726dd3bfe944879a7923de5f806) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_5.asset using Guid(52f77726dd3bfe944879a7923de5f806) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cd04c5c9c40f76000ff6995641688f7') in 0.031417 seconds
-  Import took 0.042144 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000741 seconds.
-  path: Assets/Sprites/backgroundlolo_7.asset
-  artifactKey: Guid(0d245b9cd7851a544a505fbdc1eecd2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_7.asset using Guid(0d245b9cd7851a544a505fbdc1eecd2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f54afbe607239a992ee27ca8823f425f') in 0.031382 seconds
-  Import took 0.043287 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000695 seconds.
-  path: Assets/Sprites/backgroundlolo_10.asset
-  artifactKey: Guid(ae2a9e78a0423d143afd2ee5447e1d71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_10.asset using Guid(ae2a9e78a0423d143afd2ee5447e1d71) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08eb03e1339412df55c2e940a7beb09e') in 0.034367 seconds
-  Import took 0.045778 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000677 seconds.
-  path: Assets/Sprites/backgroundlolo_2.asset
-  artifactKey: Guid(94b742eb1d31f074da1068f1c76854c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_2.asset using Guid(94b742eb1d31f074da1068f1c76854c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78aefd0da1b6bc869b22029c55da685f') in 0.031724 seconds
-  Import took 0.042187 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000600 seconds.
-  path: Assets/Sprites/backgroundlolo_9.asset
-  artifactKey: Guid(52c1dd9dbeec3964097f096b8f16441b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_9.asset using Guid(52c1dd9dbeec3964097f096b8f16441b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '392f69a037876b16934406741b5fbd12') in 0.023493 seconds
-  Import took 0.033468 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000510 seconds.
-  path: Assets/Sprites/RUN.png
-  artifactKey: Guid(d3d8853cace9fcf4a86ca9240881e888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/RUN.png using Guid(d3d8853cace9fcf4a86ca9240881e888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc023ded9760cfc11afbc10a6e9b4174') in 0.026579 seconds
-  Import took 0.033313 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000592 seconds.
-  path: Assets/Sprites/backgroundlolo_0.asset
-  artifactKey: Guid(6cde116920dbc9d4792d943aec60eb53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_0.asset using Guid(6cde116920dbc9d4792d943aec60eb53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31fb1ba3dc30abbf6d3980663c153a4b') in 0.020833 seconds
-  Import took 0.030751 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000569 seconds.
-  path: Assets/Sprites/backgroundlolo_1.asset
-  artifactKey: Guid(88a385962b35d4346b6ec391e198cc3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_1.asset using Guid(88a385962b35d4346b6ec391e198cc3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41892de109bd96cf67654d822a008cf9') in 0.021003 seconds
-  Import took 0.027718 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000623 seconds.
+  Time since last request: 0.000203 seconds.
   path: Assets/Sprites/Play.png
   artifactKey: Guid(883e3ae43a371de49ae60f16186d2da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Play.png using Guid(883e3ae43a371de49ae60f16186d2da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '539a8600cb2cf2ce9fe518432a98646c') in 0.034485 seconds
-  Import took 0.042501 seconds .
+Start importing Assets/Sprites/Play.png using Guid(883e3ae43a371de49ae60f16186d2da2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b531ab430b57fd5351f215304e1b8b4e') in 0.007917 seconds
+  Import took 0.010477 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000652 seconds.
-  path: Assets/Sprites/HoldSpace.png
-  artifactKey: Guid(513d22f8b428fd34ab90489f8f885400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/HoldSpace.png using Guid(513d22f8b428fd34ab90489f8f885400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '940c4cf101346b3517d757cb131b3f48') in 0.039212 seconds
-  Import took 0.047999 seconds .
+  Time since last request: 0.000208 seconds.
+  path: Assets/Sprites/Lvl1.png
+  artifactKey: Guid(ff4f17aca6a0d3247aeb706eee40e184) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Lvl1.png using Guid(ff4f17aca6a0d3247aeb706eee40e184) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb783e2c377c5c613913c07b8b5624d6') in 0.008081 seconds
+  Import took 0.010881 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000516 seconds.
-  path: Assets/Sprites/backgroundlolo_12.asset
-  artifactKey: Guid(73d00ff081e4d85459a324935eb1bfce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_12.asset using Guid(73d00ff081e4d85459a324935eb1bfce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f274bf7f78be15f87cc25b4ecb7002da') in 0.021244 seconds
-  Import took 0.027746 seconds .
+  Time since last request: 0.000172 seconds.
+  path: Assets/Sprites/Cursor.png
+  artifactKey: Guid(81f8629ba8beb67448fdf19883250fa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Cursor.png using Guid(81f8629ba8beb67448fdf19883250fa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7257c48745190a07ec21b2bc5fc44429') in 0.008173 seconds
+  Import took 0.010865 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000507 seconds.
-  path: Assets/Sprites/grappletile-Sheet.png
-  artifactKey: Guid(7b6777c69894cc446b770a27d241164b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/grappletile-Sheet.png using Guid(7b6777c69894cc446b770a27d241164b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eab8ab6542930db2e59a1408b6e4619f') in 0.053201 seconds
-  Import took 0.062364 seconds .
+  Time since last request: 0.000184 seconds.
+  path: Assets/Sprites/Debug.png
+  artifactKey: Guid(73511b95c15f7804eb16b007753fbb4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Debug.png using Guid(73511b95c15f7804eb16b007753fbb4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ad629945a8ee13945f0573be28bcc15') in 0.007444 seconds
+  Import took 0.010186 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000694 seconds.
-  path: Assets/Sprites/backgroundlolo_6.asset
-  artifactKey: Guid(9b10bb653cda2494285b19616054979c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_6.asset using Guid(9b10bb653cda2494285b19616054979c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ace7e8f15733d3860310ebd9580e172') in 0.028504 seconds
-  Import took 0.038362 seconds .
+  Time since last request: 0.000229 seconds.
+  path: Assets/Sprites/Circle.png
+  artifactKey: Guid(a0869f6ebebe8b846bba6d43f48bc4cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Circle.png using Guid(a0869f6ebebe8b846bba6d43f48bc4cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd795a8951c227f7092e65e70219b0cb7') in 0.010368 seconds
+  Import took 0.013805 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000651 seconds.
-  path: Assets/Sprites/JUMP1.png
-  artifactKey: Guid(3dc6e8a3912c0b34c91da2c07d1ce133) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/JUMP1.png using Guid(3dc6e8a3912c0b34c91da2c07d1ce133) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ceb37e39fdafea681cc267af5d1e748') in 0.037827 seconds
-  Import took 0.048353 seconds .
+  Time since last request: 0.000227 seconds.
+  path: Assets/Sprites/MainMenu.png
+  artifactKey: Guid(560c6128c9c90094ca6e9d9d8935f0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/MainMenu.png using Guid(560c6128c9c90094ca6e9d9d8935f0dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09fd01c3cb44280522044dd8c8d67207') in 0.007461 seconds
+  Import took 0.010242 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000983 seconds.
-  path: Assets/Sprites/levelSelect.png
-  artifactKey: Guid(359ec05de97ff8946b50c3bcba1c9979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/levelSelect.png using Guid(359ec05de97ff8946b50c3bcba1c9979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cf36a9f176df2d7dfbf4ce2984e7d1b') in 0.032919 seconds
-  Import took 0.042423 seconds .
+  Time since last request: 1.519762 seconds.
+  path: Assets/Prefab/EnemyManager.prefab
+  artifactKey: Guid(2cbdd1490566d90458aa6e3ebf99600f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/EnemyManager.prefab using Guid(2cbdd1490566d90458aa6e3ebf99600f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef6f96e2ba45f057564a4f57a3073251') in 0.013715 seconds
+  Import took 0.016382 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000977 seconds.
-  path: Assets/Sprites/backgroundlolo_11.asset
-  artifactKey: Guid(375871751dbe00d48964ad4fd49f2fa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_11.asset using Guid(375871751dbe00d48964ad4fd49f2fa3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebfa14626f296f328e48794892c2b5f7') in 0.024382 seconds
-  Import took 0.034374 seconds .
+  Time since last request: 0.000248 seconds.
+  path: Assets/Prefab/GrappleBlock.prefab
+  artifactKey: Guid(2c72fa9c0785d224090d9646ebd20bd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/GrappleBlock.prefab using Guid(2c72fa9c0785d224090d9646ebd20bd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '673ff7fb809a29edefe8dbe2f359a0a3') in 0.023375 seconds
+  Import took 0.025871 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000607 seconds.
-  path: Assets/Sprites/backgroundlolo_13.asset
-  artifactKey: Guid(7f24946798dfa694e87b0c6cb2cf65c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/backgroundlolo_13.asset using Guid(7f24946798dfa694e87b0c6cb2cf65c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a6d7247f3adb630825b0ebddba1cacc') in 0.033071 seconds
-  Import took 0.043049 seconds .
+  Time since last request: 0.000243 seconds.
+  path: Assets/Prefab/Player.prefab
+  artifactKey: Guid(bf826a516cd6e7046b37de49bbba8f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Player.prefab using Guid(bf826a516cd6e7046b37de49bbba8f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83a3b8642fcd65e10145d6528cc3d6fa') in 0.014256 seconds
+  Import took 0.016930 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000714 seconds.
-  path: Assets/Sprites/Lvl2.png
-  artifactKey: Guid(f901c14d3ddf09b4c9c08298dda765ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Lvl2.png using Guid(f901c14d3ddf09b4c9c08298dda765ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8a6abf91f3a4bb5a0328f17d5ab0b8b') in 0.033111 seconds
-  Import took 0.042885 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.851539 seconds.
-  path: Assets/Scripts/UI
-  artifactKey: Guid(209967b17d2b2084089f50a176b414ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/UI using Guid(209967b17d2b2084089f50a176b414ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eee1fed7d226aed8d00bd17c8e679f6d') in 0.020520 seconds
-  Import took 0.036307 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.691933 seconds.
-  path: Assets/Scripts/UI/EscapeMenu.cs
-  artifactKey: Guid(af06b653bb386ed42a183bf9be019080) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/UI/EscapeMenu.cs using Guid(af06b653bb386ed42a183bf9be019080) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82455eadbb9c529baa4fcf27b6233900') in 0.028306 seconds
-  Import took 0.038683 seconds .
+  Time since last request: 0.002366 seconds.
+  path: Assets/Prefab/Player.prefab
+  artifactKey: Guid(bf826a516cd6e7046b37de49bbba8f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Player.prefab using Guid(bf826a516cd6e7046b37de49bbba8f38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83a3b8642fcd65e10145d6528cc3d6fa') in 0.010839 seconds
+  Import took 0.014212 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006812 seconds.
+Registered in 0.001704 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.59 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.969 seconds
+- Completed reload, in  1.070 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1964 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 94.2 MB.
 System memory in use after: 94.2 MB.
 
 Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2455.
-Total: 7.046100 ms (FindLiveObjects: 0.562700 ms CreateObjectMapping: 0.270800 ms MarkObjects: 5.863500 ms  DeleteObjects: 0.346100 ms)
+Total: 1.652600 ms (FindLiveObjects: 0.155700 ms CreateObjectMapping: 0.064700 ms MarkObjects: 1.349500 ms  DeleteObjects: 0.081800 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004627 seconds.
+Registered in 0.002134 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.51 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.099 seconds
+- Completed reload, in  0.784 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.17 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1964 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 94.3 MB.
 System memory in use after: 94.3 MB.
 
 Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2459.
-Total: 7.387600 ms (FindLiveObjects: 0.487000 ms CreateObjectMapping: 0.236600 ms MarkObjects: 6.228500 ms  DeleteObjects: 0.431600 ms)
+Total: 1.679200 ms (FindLiveObjects: 0.160300 ms CreateObjectMapping: 0.129200 ms MarkObjects: 1.312100 ms  DeleteObjects: 0.076800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 121.302516 seconds.
+  path: Assets/Scenes/Title.unity
+  artifactKey: Guid(e66df69fd36561f498e1a9f0766b8b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Title.unity using Guid(e66df69fd36561f498e1a9f0766b8b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '342e5351664fa373f8f2f5e6e6add8c9') in 0.012405 seconds
+  Import took 0.015215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.271809 seconds.
+  path: Assets/Scenes/Level1.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level1.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e3cf8dae8f071522e7c41352131bdfe') in 0.003858 seconds
+  Import took 0.006713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000403 seconds.
+  path: Assets/Scenes/Level1.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level1.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e3cf8dae8f071522e7c41352131bdfe') in 0.003019 seconds
+  Import took 0.005636 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006941 seconds.
+Registered in 0.001680 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.822 seconds
+- Completed reload, in  0.754 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1964 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 94.3 MB.
 System memory in use after: 94.3 MB.
 
 Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2463.
-Total: 7.055800 ms (FindLiveObjects: 0.620700 ms CreateObjectMapping: 0.274800 ms MarkObjects: 5.797900 ms  DeleteObjects: 0.358100 ms)
+Total: 1.598200 ms (FindLiveObjects: 0.192100 ms CreateObjectMapping: 0.068400 ms MarkObjects: 1.257200 ms  DeleteObjects: 0.079800 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1172.912735 seconds.
-  path: Assets/Sprites/Back.png
-  artifactKey: Guid(2df0bed207c7b714baca674307960978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Back.png using Guid(2df0bed207c7b714baca674307960978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecff4b16f4ce8997dee934360ee65002') in 0.150383 seconds
-  Import took 0.160782 seconds .
+  Time since last request: 70.304840 seconds.
+  path: Assets/Sprites/Reser.png
+  artifactKey: Guid(1ca32f51ef610694ba005913f5d19cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Reser.png using Guid(1ca32f51ef610694ba005913f5d19cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9790108d70da6c559ff32985ad327fa4') in 0.045455 seconds
+  Import took 0.048126 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 32.871588 seconds.
-  path: Assets/Sprites/Back.png
-  artifactKey: Guid(2df0bed207c7b714baca674307960978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/Back.png using Guid(2df0bed207c7b714baca674307960978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ffaab166fa63ee356d4ae72917e842c') in 0.027042 seconds
-  Import took 0.032310 seconds .
+  Time since last request: 29.197407 seconds.
+  path: Assets/Sprites/Reser.png
+  artifactKey: Guid(1ca32f51ef610694ba005913f5d19cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Reser.png using Guid(1ca32f51ef610694ba005913f5d19cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40069b9044e6d4a7aba40fdb65c1fa5c') in 0.017997 seconds
+  Import took 0.020731 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004174 seconds.
+  path: Assets/Sprites/Reser.png
+  artifactKey: Guid(1ca32f51ef610694ba005913f5d19cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Reser.png using Guid(1ca32f51ef610694ba005913f5d19cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40069b9044e6d4a7aba40fdb65c1fa5c') in 0.009890 seconds
+  Import took 0.013007 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003235 seconds.
+Registered in 0.001515 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.575 seconds
+- Completed reload, in  0.784 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1964 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 94.3 MB.
 System memory in use after: 94.3 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2468.
-Total: 6.549300 ms (FindLiveObjects: 0.550600 ms CreateObjectMapping: 0.351400 ms MarkObjects: 5.416600 ms  DeleteObjects: 0.227900 ms)
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2470.
+Total: 1.707600 ms (FindLiveObjects: 0.179000 ms CreateObjectMapping: 0.075100 ms MarkObjects: 1.365300 ms  DeleteObjects: 0.087300 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006001 seconds.
+Registered in 0.001695 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.409 seconds
+- Completed reload, in  0.891 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.82 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1964 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.3 MB.
+System memory in use before: 94.4 MB.
 System memory in use after: 94.3 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2472.
-Total: 7.074400 ms (FindLiveObjects: 0.691200 ms CreateObjectMapping: 0.383200 ms MarkObjects: 5.661300 ms  DeleteObjects: 0.334700 ms)
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2474.
+Total: 2.706600 ms (FindLiveObjects: 0.168900 ms CreateObjectMapping: 0.068200 ms MarkObjects: 2.338600 ms  DeleteObjects: 0.130100 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002948 seconds.
+Registered in 0.001755 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.32 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.772 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1964 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.4 MB.
+System memory in use after: 94.3 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2478.
+Total: 2.294600 ms (FindLiveObjects: 0.237400 ms CreateObjectMapping: 0.123700 ms MarkObjects: 1.677300 ms  DeleteObjects: 0.255500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001662 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.516 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1964 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 94.4 MB.
+System memory in use after: 94.4 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2482.
+Total: 2.001300 ms (FindLiveObjects: 0.211600 ms CreateObjectMapping: 0.082200 ms MarkObjects: 1.606200 ms  DeleteObjects: 0.100300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001843 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.34 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  2.474 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1964 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 94.3 MB.
-System memory in use after: 94.3 MB.
+System memory in use before: 94.4 MB.
+System memory in use after: 94.4 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2476.
-Total: 3.426500 ms (FindLiveObjects: 0.378500 ms CreateObjectMapping: 0.147500 ms MarkObjects: 2.724000 ms  DeleteObjects: 0.174700 ms)
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2486.
+Total: 1.715900 ms (FindLiveObjects: 0.166200 ms CreateObjectMapping: 0.065300 ms MarkObjects: 1.360000 ms  DeleteObjects: 0.123800 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
