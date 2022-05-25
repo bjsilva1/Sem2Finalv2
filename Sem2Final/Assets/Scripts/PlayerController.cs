@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
     private float coyoteTimer;
     private float size = 2;
     private Transform sprite;
+    private Transform grappleSprite;
     public Transform playerSprite { get { return sprite; } }
     //public GameObject particleEmitterObject;
 
@@ -70,6 +71,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         sprite = transform.GetChild(0);
+        grappleSprite = transform.GetChild(1);
         moveDirection = 1;
         //jumpParticle = particleEmitterObject.GetComponent<ParticleSystem>();
         playerRb = GetComponent<Rigidbody2D>();
@@ -104,7 +106,24 @@ public class PlayerController : MonoBehaviour
             }
             return;
         }
-        grapple.SetPosition(0, transform.position);
+
+        grapple.SetPosition(0, grappleSprite.position);
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        //GrappleSprite movement
+        float grappleAngle;
+        if (grappleHooked)
+        {
+            grappleAngle = Mathf.Atan2(transform.position.y - grappleEnd.position.y, transform.position.x - grappleEnd.position.x);
+        }
+        else
+        {
+            grappleAngle = Mathf.Atan2(transform.position.y - mousePos.y, transform.position.x - mousePos.x);
+        }
+        grappleSprite.rotation = Quaternion.Euler(0, 0, grappleAngle * Mathf.Rad2Deg + 180);
+
+
+
+
         if (grappleHooked && !onGround)
         {
             MovePlayerRope();
@@ -118,7 +137,6 @@ public class PlayerController : MonoBehaviour
         if(!grappleHooked && Input.GetKeyDown(KeyCode.Mouse0))
         {
             grapple.gameObject.SetActive(true);
-            mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         }
 
         if(grapple.gameObject.activeSelf && !grappleHooked)
